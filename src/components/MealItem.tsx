@@ -38,7 +38,7 @@ const MealItem = ({ id, title, imageURL, affordability, complexity, duration }: 
                     />
                     <Text style={styles.title}>{title}</Text>
                 </View>
-                <MealShortDetails duration={duration} complexity={complexity} affordability={affordability} />
+                <MealShortDetails duration={duration} complexity={complexity} affordability={affordability} style={{}} textStyle={{}} />
                 </View>
             </Pressable>
         </View>

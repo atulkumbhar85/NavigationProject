@@ -5,14 +5,16 @@ type MealShortDetailsProps = {
     affordability: string,
     complexity: string,
     duration: string,
+    style: Object,
+    textStyle: Object
 }
 
-const MealShortDetails = ({duration, complexity, affordability}: MealShortDetailsProps) => {
+const MealShortDetails = ({duration, complexity, affordability, style, textStyle}: MealShortDetailsProps) => {
   return (
-    <View style={styles.detailsStyle}>
-        <Text style={styles.detailItemStyle}>{duration} mins</Text>
-        <Text style={styles.detailItemStyle}>{complexity.toUpperCase()}</Text>
-        <Text style={styles.detailItemStyle}>{affordability.toUpperCase()}</Text>
+    <View style={[styles.detailsStyle, style]}>
+        <Text style={[styles.detailItemStyle, textStyle]}>{duration} mins</Text>
+        <Text style={[styles.detailItemStyle, textStyle]}>{complexity.toUpperCase()}</Text>
+        <Text style={[styles.detailItemStyle, textStyle]}>{affordability.toUpperCase()}</Text>
     </View>
   )
 }
