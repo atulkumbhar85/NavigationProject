@@ -21,6 +21,7 @@ import MealDetails from './src/screens/MealDetails';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Favorites from './src/screens/Favorites';
 import IonIcons from 'react-native-vector-icons/Ionicons'
+import FavoritesContextProvider from './store/context/favorite-context';
 
 const Stack = createNativeStackNavigator()
 const Drawer = createDrawerNavigator()
@@ -69,6 +70,7 @@ function App(): JSX.Element {
   return (
     <>
       <StatusBar barStyle={'default'} />
+      <FavoritesContextProvider>
       <NavigationContainer>
         <Stack.Navigator
         screenOptions={{
@@ -100,6 +102,7 @@ function App(): JSX.Element {
           }}/>
         </Stack.Navigator>
       </NavigationContainer>
+      </FavoritesContextProvider>
     </>
   );
 }
@@ -114,3 +117,4 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
